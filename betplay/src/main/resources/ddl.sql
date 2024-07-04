@@ -53,7 +53,8 @@ CREATE TABLE sponsor (
 -- Player Database
 CREATE TABLE position (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(45) NOT NULL
+    name VARCHAR(45) NOT NULL,
+    description MEDIUMTEXT NOT NULL
 );
 
 
@@ -64,6 +65,8 @@ CREATE TABLE injury_severity (
     name VARCHAR(45) NOT NULL,
     description MEDIUMTEXT NOT NULL
 );
+
+
 
 
 CREATE TABLE injury_type (
