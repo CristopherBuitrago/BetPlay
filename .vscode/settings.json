@@ -10,6 +10,7 @@
         "incapacidad",
         "jugador",
         "Leve",
+        "ligabetplay",
         "meses",
         "moderados",
         "moretones",
@@ -19,9 +20,11 @@
         "Roja",
         "tendrá",
         "tiempo",
-        "transcurso"
+        "transcurso",
+        "Userlogin"
     ],
     "conventionalCommits.scopes": [
-        "Codigo ddl arreglado"
+        "Codigo ddl arreglado",
+        "Agregado"
     ]
 }
