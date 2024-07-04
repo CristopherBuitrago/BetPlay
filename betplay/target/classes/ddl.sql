@@ -66,6 +66,12 @@ CREATE TABLE injury_severity (
 );
 
 
+CREATE TABLE injury_type (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(45) NOT NULL,
+    description MEDIUMTEXT NOT NULL
+);
+
 
 
 CREATE TABLE injury(
@@ -76,15 +82,6 @@ CREATE TABLE injury(
     finishDate DATE NOT NULL,
     FOREIGN KEY (injuryType) REFERENCES injury_type (id),
     FOREIGN KEY (injurySeverity) REFERENCES injury_severity (id)
-);
-
-
-
-
-CREATE TABLE injury_type (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(45) NOT NULL,
-    description MEDIUMTEXT NOT NULL
 );
 
 

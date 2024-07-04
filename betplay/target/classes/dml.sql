@@ -89,14 +89,14 @@ INSERT INTO role_has_permission(role, permission) VALUES
 
 -- insert card types
 INSERT INTO card_type(color, description) VALUES
-("Amarilla", "El jugador tuvo una falta leve por comprotamiento, puede ser tanto fisico como verbal."),
+("Amarillo", "El jugador tuvo una falta leve por comprotamiento, puede ser tanto fisico como verbal."),
 ("Roja", "El jugador cometió una falta grave por comportamiento, puede ser tanto fisico como verbal.");
 
 -- insert injury_severity
 INSERT INTO injury_severity (name, description) VALUES
 ("Leve", "Ejemplos: moretones, etc; El jugador se recuperará en poco tiempo, con un poco de cuidado y atención es suficiente."),
 ("Media", "Ejemplos: hinchazón, golpes moderados, etc; El jugador se recuperará en el transcurso de las semanas."),
-("Grave", "Ejemplos: Desgarres, fracturas, etc; El jugadro tendrá incapacidad hasta su recuperación. Podrán ser meses o semanas.");
+("Grave", "Ejemplos: Desgarres, fracturas, etc; El jugador tendrá incapacidad hasta su recuperación. Podrán ser meses o semanas.");
 
 -- insert injury_type
 INSERT INTO injury_type (type, description) VALUES
