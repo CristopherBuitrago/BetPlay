@@ -20,5 +20,8 @@
         "tendrá",
         "tiempo",
         "transcurso"
+    ],
+    "conventionalCommits.scopes": [
+        "Codigo ddl arreglado"
     ]
 }

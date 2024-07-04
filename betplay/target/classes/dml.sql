@@ -1,46 +1,46 @@
--- insert of data
+-- Insert data
 
--- insert permissions
+-- Insert permissions
 INSERT INTO permission(description) VALUES
-("Gestion de equipos"),
-("Gestion de jugadores"),
-("Programacion de partidos"),
-("Registro de resultados"),
-("Visualización de estadísticas"),
-("Gestión de noticias y comunicados"),
-("Gestión de entrenadores"),
-("Gestión de entrenadores"),
-("Gestión de arbitros"),
-("Gestión de estadios"),
-("Venta de entradas"),
-("Gestion de patrocinios"),
-("Generacion de informes"),
-("Gestión de incidentes y sanciones"),
-("Consulta de calendario de partidos"),
-("Gestión de medios de comunicación"),
-("Gestión de lesiones de jugadores"),
-("Gestion de entrenamientos"),
-("Seguimiento de rendimiento de jugadores"),
-("Gestion de transferencia de jugadores"),
-("Gestion de equipamiento"),
-("Gestion de convocatorias de jugadores"),
-("Gestion de premios y reconocimientos"),
-("Gestión de usuarios y roles"),
-("Gestion de patrocinadores y publicidad"),
-("Gestion de relaciones publicas");
+("Team management"),
+("Player management"),
+("Match scheduling"),
+("Recording results"),
+("Viewing statistics"),
+("News and communications management"),
+("Coach management"),
+("Coach management"),
+("Referee management"),
+("Stadium management"),
+("Ticket sales"),
+("Sponsorship management"),
+("Report generation"),
+("Incident and sanction management"),
+("Match schedule consultation"),
+("Media management"),
+("Player injury management"),
+("Training management"),
+("Player performance tracking"),
+("Player transfer management"),
+("Equipment management"),
+("Player call-up management"),
+("Awards and recognitions management"),
+("User and role management"),
+("Sponsors and advertising management"),
+("Public relations management");
 
--- insert roles
+-- Insert roles
 INSERT INTO role(name) VALUES
-("Administrador de la liga"),
-("Equipo técnico"),
-("Arbitro"),
-("Aficionado"),
-("Periodista"),
-("Medico del equipo");
+("League administrator"),
+("Technical team"),
+("Referee"),
+("Fan"),
+("Journalist"),
+("Team doctor");
 
--- insert permission to roles
+-- Insert permission to roles
 INSERT INTO role_has_permission(role, permission) VALUES
--- administrador de la liga
+-- league administrator
 (1,1),
 (1,2),
 (1,3),
@@ -59,7 +59,7 @@ INSERT INTO role_has_permission(role, permission) VALUES
 (1,23),
 (1,24),
 (1,25),
--- equipo técnico
+-- technical team
 (2,2),
 (2,5),
 (2,7),
@@ -71,48 +71,46 @@ INSERT INTO role_has_permission(role, permission) VALUES
 (2,19),
 (2,20),
 (2,21),
--- arbitro
+-- referee
 (3,4),
 (3,13),
--- aficionado
+-- fan
 (4,5),
 (4,10),
 (4,14),
--- periodista
+-- journalist
 (5,5),
 (5,6),
 (5,14),
 (5,15),
 (5,25),
--- medico del equipo
+-- team doctor
 (6,16);
 
--- insert card types
+-- Insert card types
 INSERT INTO card_type(color, description) VALUES
-("Amarillo", "El jugador tuvo una falta leve por comprotamiento, puede ser tanto fisico como verbal."),
-("Roja", "El jugador cometió una falta grave por comportamiento, puede ser tanto fisico como verbal.");
+("Yellow", "The player had a minor foul due to behavior, it can be either physical or verbal."),
+("Red", "The player committed a serious foul due to behavior, it can be either physical or verbal.");
 
--- insert injury_severity
+-- Insert injury_severity
 INSERT INTO injury_severity (name, description) VALUES
-("Leve", "Ejemplos: moretones, etc; El jugador se recuperará en poco tiempo, con un poco de cuidado y atención es suficiente."),
-("Media", "Ejemplos: hinchazón, golpes moderados, etc; El jugador se recuperará en el transcurso de las semanas."),
-("Grave", "Ejemplos: Desgarres, fracturas, etc; El jugador tendrá incapacidad hasta su recuperación. Podrán ser meses o semanas.");
+("Minor", "Examples: bruises, etc; The player will recover quickly, with a little care and attention it's enough."),
+("Moderate", "Examples: swelling, moderate blows, etc; The player will recover within weeks."),
+("Severe", "Examples: tears, fractures, etc; The player will be incapacitated until recovery. It could be months or weeks.");
 
--- insert injury_type
+-- Insert injury_type
 INSERT INTO injury_type (type, description) VALUES
-("Fisica", "La lesion fue recibida en el cuerpo o parte de este.");
+("Physical", "The injury was received on the body or a part of it.");
 
--- insert position
+-- Insert position
 INSERT INTO position (name, description) VALUES
-("Portero", "Se encarga de que la pelota no entre al arco."),
-("Defensa", "Intenta detener al equipo enemigo para que no llegue al arco de su equipo."),
-("Medio Campista", "Se encarga de ayudar a delanteros y defensores, están en un punto estratégico para que su movilidad de facilite."),
-("Delantero", "Es el que se encarga de intentar anotar goles en la porteria enemiga para así asegurar su victoria.");
+("Goalkeeper", "Responsible for preventing the ball from entering the goal."),
+("Defender", "Tries to stop the opposing team from reaching their goal."),
+("Midfielder", "Helps both forwards and defenders, they are strategically positioned for better mobility."),
+("Forward", "Responsible for attempting to score goals in the opponent's goal to secure victory.");
 
--- insert activity
+-- Insert activity
 INSERT INTO activity (title, description, duration) VALUES
-("Actividad física", "Con la actividad física nos aseguramos de mejorar la resistencia y el físico de nuestros jugadores para obtener mayor ventaja frente equipos enemigos.", 2:00),
-("Actividad estratégica", "Estudios de diferentes estratégias para aplicarlas en partidos", 2:00),
-("Actividad psicológica", "Se centra en estudiar los movimientos del equipo enemigo para obtener más ventaja", 2:00);
-
--- TODO: Sponsor
+("Physical activity", "With physical activity, we ensure to improve the resistance and physical condition of our players to gain an advantage against opposing teams.", '2:00'),
+("Strategic activity", "Study of different strategies to apply in matches", '2:00'),
+("Psychological activity", "Focuses on studying the movements of the opposing team to gain more advantage", '2:00');
