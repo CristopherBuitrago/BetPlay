@@ -1,4 +1,4 @@
-package com.ligabetplay.model.entity;
+package com.ligabetplay.model.user;
 
 public class User {
 
