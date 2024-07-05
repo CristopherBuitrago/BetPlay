@@ -1,9 +1,14 @@
+package com.ligabetplay.model.user;
+
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Properties;
 
 public class UserService {
+    
     private IUserRegistrationDAO userRegistrationDAO;
     private IUserAuthenticationDAO userAuthenticationDAO;
     private IUserRetrievalDAO userRetrievalDAO;
@@ -24,8 +29,7 @@ public class UserService {
             this.userRetrievalDAO = new UserRetrievalDAOImpl(connection);
             this.userUpdateDAO = new UserUpdateDAOImpl(connection);
             this.userDeletionDAO = new UserDeletionDAOImpl(connection);
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (IOException | SQLException e) {
         }
     }
 

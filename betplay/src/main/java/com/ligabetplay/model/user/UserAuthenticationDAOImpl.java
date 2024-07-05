@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 public class UserAuthenticationDAOImpl implements IUserAuthenticationDAO{
 
-    private Connection connection;
+    private final Connection connection;
 
     public UserAuthenticationDAOImpl(Connection connection) {
         this.connection = connection;
@@ -15,12 +15,16 @@ public class UserAuthenticationDAOImpl implements IUserAuthenticationDAO{
 
     @Override
     public boolean login(User user) throws SQLException {
-        String sql = "SELECT username FROM users WHERE email = ? AND password = ?";
+        // declare query
+        String sql = "SELECT id FROM users WHERE email = ? AND password = ?";
+        // declare the statement
         PreparedStatement statement = connection.prepareStatement(sql);
+        // set parametters
         statement.setString(1, user.getEmail());
         statement.setString(2, user.getPassword());
+        // make a list of the data get into database
         ResultSet rs = statement.executeQuery();
-
+        // return the boolean value
         return rs.next();
     }
     

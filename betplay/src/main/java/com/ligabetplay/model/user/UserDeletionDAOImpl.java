@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class UserDeletionDAOImpl implements IUserDeletionDAO{
 
-    private Connection connection;
+    private final Connection connection;
 
     public UserDeletionDAOImpl(Connection connection) {
         this.connection = connection;
