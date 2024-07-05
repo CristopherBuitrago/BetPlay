@@ -17,7 +17,7 @@ public class UserRetrievalDAOImpl implements IUserRetrievalDAO{
     @Override
     public List<User> getAllUsers() throws SQLException {
         List<User> users = new ArrayList<>();
-        String sql = "SELECT * FROM users";
+        String sql = "SELECT id, username, email, role FROM users";
         PreparedStatement statement = connection.prepareStatement(sql);
         ResultSet rs = statement.executeQuery();
 
@@ -26,7 +26,6 @@ public class UserRetrievalDAOImpl implements IUserRetrievalDAO{
             user.setId(rs.getInt("id"));
             user.setUsername(rs.getString("username"));
             user.setEmail(rs.getString("email"));
-            user.setPassword(rs.getString("password"));
             user.setRole(rs.getInt("role"));
             users.add(user);
         }
