@@ -21,5 +21,4 @@ public class UserRegistrationDAOImpl implements IUserRegistrationDAO{
         statement.setInt(4, user.getRole());
         statement.executeUpdate();
     }
-    
 }
