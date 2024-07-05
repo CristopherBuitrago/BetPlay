@@ -13,7 +13,7 @@ public class UserUpdateDAOImpl implements IUserUpdateDAO{
 
     @Override
     public void updateUsername(User user) throws SQLException {
-        String sql = "UPDATE users SET username = ? WHERE id = ?";
+        String sql = "UPDATE user SET username = ? WHERE id = ?";
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setString(1, user.getUsername());
         statement.setInt(2, user.getId());
@@ -22,7 +22,7 @@ public class UserUpdateDAOImpl implements IUserUpdateDAO{
 
     @Override
     public void updateEmail(User user) throws SQLException {
-        String sql = "UPDATE users SET email = ? WHERE id = ?";
+        String sql = "UPDATE user SET email = ? WHERE id = ?";
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setString(1, user.getEmail());
         statement.setInt(2, user.getId());
@@ -31,7 +31,7 @@ public class UserUpdateDAOImpl implements IUserUpdateDAO{
 
     @Override
     public void updatePassword(User user) throws SQLException {
-        String sql = "UPDATE users SET password = ? WHERE id = ?";
+        String sql = "UPDATE user SET password = ? WHERE id = ?";
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setString(1, user.getPassword());
         statement.setInt(2, user.getId());
@@ -40,7 +40,7 @@ public class UserUpdateDAOImpl implements IUserUpdateDAO{
 
     @Override
     public void updateRole(User user) throws SQLException {
-        String sql = "UPDATE users SET role = ? WHERE id = ?";
+        String sql = "UPDATE user SET role = ? WHERE id = ?";
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setInt(1, user.getRole());
         statement.setInt(2, user.getId());
@@ -49,7 +49,7 @@ public class UserUpdateDAOImpl implements IUserUpdateDAO{
 
     @Override
     public void updateUser(User user) throws SQLException {
-        String sql = "UPDATE users SET username = ?, email = ?, password = ?, role = ? WHERE id = ?";
+        String sql = "UPDATE user SET username = ?, email = ?, password = ?, role = ? WHERE id = ?";
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setString(1, user.getUsername());
         statement.setString(2, user.getEmail());

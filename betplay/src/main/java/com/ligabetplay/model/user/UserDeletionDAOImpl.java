@@ -14,7 +14,7 @@ public class UserDeletionDAOImpl implements IUserDeletionDAO{
 
     @Override
     public void deleteUser(User user) throws SQLException {
-        String sql = "DELETE FROM users WHERE id = ?";
+        String sql = "DELETE FROM user WHERE id = ?";
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setInt(1, user.getId());
         statement.executeUpdate();

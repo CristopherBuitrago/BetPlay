@@ -13,7 +13,7 @@ public class UserRegistrationDAOImpl implements IUserRegistrationDAO{
 
     @Override
     public void register(User user) throws SQLException {
-        String sql = "INSERT INTO users (username, email, password, role) VALUES (?,?,?,?)";
+        String sql = "INSERT INTO user (username, email, password, role) VALUES (?,?,?,?)";
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setString(1, user.getUsername());
         statement.setString(2, user.getEmail());

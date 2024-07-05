@@ -38,22 +38,21 @@ public class UserView implements IUserView {
         int pageSize = 3;
         int totalUsers = users.size();
         int totalPages = (int) Math.ceil((double) totalUsers / pageSize);
-        String leftAlignFormat = "| %-4d | %-15s | %-23s | %-7d |%n";
+        String leftAlignFormat = "| %-4d | %-15s | %-40s | %-12d |%n";
 
         for (int page = 1; page <= totalPages; page++) {
-            System.out.format("+------+----------------+-------------------------+--------------+%n");
-            System.out.format("| ID   | Username       | Email                   | Role ID      |%n");
-            System.out.format("+------+----------------+-------------------------+--------------+%n");
+            System.out.format("+------+-----------------+------------------------------------------+--------------+%n");
+            System.out.format("| ID   | Username        | Email                                    | Role ID      |%n");
+            System.out.format("+------+-----------------+------------------------------------------+--------------+%n");
 
             int start = (page - 1) * pageSize;
             int end = Math.min(start + pageSize, totalUsers);
             for (int i = start; i < end; i++) {
                 User user = users.get(i);
-                System.out.format(leftAlignFormat, user.getId(), user.getUsername());
+                System.out.format(leftAlignFormat, user.getId(), user.getUsername(), user.getEmail(), user.getRole());
             }
-
-            System.out.format("+------+----------------+-------------------------+--------------+%n");
-            System.out.println("                           Page " + page + " Of                           " + totalPages);
+            System.out.format("+------+-----------------+------------------------------------------+--------------+%n");
+            System.out.println("                           Page " + page + " Of" + totalPages);
 
 
             if (page <= totalPages) {

@@ -68,12 +68,12 @@ public class UserController implements IController {
     }
 
     public void loginUser() {
-        String username = view.getUsername();
+        String username = view.getEmail();
         String password = view.getPassword();
         
         User user = new User();
 
-        user.setUsername(username);
+        user.setEmail(username);
         user.setPassword(password);
 
         try {

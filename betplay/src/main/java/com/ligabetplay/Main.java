@@ -9,6 +9,7 @@ import com.ligabetplay.view.user.UserView;
 
 public class Main {
     public static void main(String[] args) {
+        // loggin
         IUserView view = new UserView();
         IUserService service = new UserService();
         IController controller = new UserController(view, service);

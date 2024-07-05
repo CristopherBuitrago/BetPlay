@@ -16,7 +16,7 @@ public class UserAuthenticationDAOImpl implements IUserAuthenticationDAO{
     @Override
     public boolean login(User user) throws SQLException {
         // declare query
-        String sql = "SELECT id FROM users WHERE email = ? AND password = ?";
+        String sql = "SELECT id FROM user WHERE email = ? AND password = ?";
         // declare the statement
         PreparedStatement statement = connection.prepareStatement(sql);
         // set parametters
