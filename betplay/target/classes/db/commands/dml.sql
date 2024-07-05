@@ -5,7 +5,7 @@ INSERT INTO permission(description) VALUES
 ("Gestion de equipos"),
 ("Gestion de jugadores"),
 ("Programacion de partidos"),
-("Registro de resultados"),     
+("Registro de resultados"), 
 ("Visualización de estadísticas"),
 ("Gestión de noticias y comunicados"),
 ("Gestión de entrenadores"),
